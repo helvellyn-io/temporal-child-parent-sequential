@@ -1,5 +1,5 @@
-# temporal-weather
-submits task to Temporal, retrieving the current temperature in Bolder CO 
+# temporal-parent-child-activity
+Registers and runs two child workflows and two activites. 
 
 #run all tests 
 go test ./...
