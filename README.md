@@ -1,4 +1,4 @@
-# temporal-weather
+# temporal-parent-child-activity
 submits task to Temporal, retrieving the current temperature in Bolder CO 
 
 #run all tests 
