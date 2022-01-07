@@ -1,5 +1,5 @@
 # temporal-parent-child-activity
-submits task to Temporal, retrieving the current temperature in Bolder CO 
+Registers and runs two child workflows and two activites. 
 
 #run all tests 
 go test ./...
