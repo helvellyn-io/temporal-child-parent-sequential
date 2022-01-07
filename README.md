@@ -2,11 +2,9 @@
 Registers and runs two child workflows and two activites. 
 
 #run all tests 
-go test ./...
+```make tests```
 
-#create task / worker and sumbit. 
-
-go run worker/main.go
-go run start/main.go 
+#run worker & start 
+```make all```
 
 
