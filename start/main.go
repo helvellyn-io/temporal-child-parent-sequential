@@ -11,15 +11,14 @@ import (
 )
 
 func main() {
-	// Client object just once per process
 	c, err := client.NewClient(client.Options{})
 	if err != nil {
 		log.Fatalln("unable to create Temporal client", err)
 	}
 	defer c.Close()
 	workflowID := "parent-workflow_" + uuid.New()
-
-	//workflowID := "Starter-Workflow"
+	//Workflow One
+	//Runs ChildWorkflowOne which exectures GetHumidity()
 	workflowOptions := client.StartWorkflowOptions{
 		ID:        workflowID,
 		TaskQueue: "child-workflow",
@@ -38,7 +37,8 @@ func main() {
 	}
 	log.Println("Workflow result child workflow 1", result_1)
 
-	//workflow two
+	//Workflow two
+	//Runs ChildWorkFlowTwo which exectures GetTemp()
 	var result_2 int
 	workflowRun, err = c.ExecuteWorkflow(context.Background(), workflowOptions, app.ChildWorkflowTwo)
 	if err != nil {
